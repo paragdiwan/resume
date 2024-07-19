@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Noto Sans";
+}
+
+@layer utilities {
+  .resume-text-color {
+    color: #e2e8f0;
+    margin: 10px 0;
+  }
+}
