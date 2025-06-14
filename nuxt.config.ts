@@ -7,11 +7,31 @@ export default defineNuxtConfig({
     "@nuxtjs/google-fonts",
     "@vesp/nuxt-fontawesome",
     "@nuxt/image",
+    "@nuxtjs/sitemap",
   ],
+
   app: {
+    baseURL: "/",
+    buildAssetsDir: "assets/",
+
     head: {
       charset: "utf-8",
       viewport: "width=device-width, initial-scale=1",
+    },
+  },
+
+  site: {
+    url: process.env.NUXT_PUBLIC_SITE_URL,
+  },
+  sitemap: {
+    siteUrl: process.env.NUXT_PUBLIC_SITE_URL,
+    sitemapName: "sitemap.xml",
+    xsl: false,
+  },
+  nitro: {
+    output: {
+      publicDir: "./public", // where to emit static assets
+      dir: "./dist", // final build output
     },
   },
   googleFonts: {
@@ -24,11 +44,10 @@ export default defineNuxtConfig({
   },
 
   tailwindcss: {
-    cssPath: "~/assets/css/tailwind.css",
+    cssPath: "/assets/css/tailwind.css",
     configPath: "tailwind.config.js",
     exposeConfig: false,
     config: {},
-    injectPosition: 0,
     viewer: true,
   },
   fontawesome: {
@@ -44,8 +63,8 @@ export default defineNuxtConfig({
       regular: ["user"],
     },
   },
-
   image: {
     dir: "assets/img",
+    provider: "static",
   },
 });

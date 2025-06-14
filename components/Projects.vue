@@ -1,5 +1,5 @@
 <template>
-    <div class="max-w-4xl">
+    <div class="">
         <!-- Section Heading -->
         <Heading title="My Current Work @ BandhanLife" />
 

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://paragdiwan.github.io/sitemap.xml

@@ -12,6 +12,8 @@
   },
   "dependencies": {
     "@nuxt/image": "^1.7.0",
+    "@nuxtjs/gtm": "^2.4.0",
+    "@nuxtjs/sitemap": "^7.4.0",
     "nuxt": "^3.12.3",
     "vue": "latest"
   },
