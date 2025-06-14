@@ -1,44 +1,46 @@
 <template>
-    <div class="grid grid-cols-12 mb-4">
-        <div v-for="(icon, index) in iconPath" :key="index">
-            <div class="flex flex-col">
-                <NuxtImg :src="icon.name" :alt="icon.name" width="30" height="30" />
-                <p v-if="displayText" class="text-sky-100 text-xs mt-4">{{ icon.text }}</p>
-            </div>
-        </div>
-    </div>
+  <div class="grid md:grid-cols-2 gap-8">
+    <!-- Frontend Card -->
+    <section class="rounded-xl bg-purple-50 p-6">
+      <div class="flex items-center gap-2 mb-4">
+        <span class="text-2xl">🎨</span>
+        <h2 class="text-xl font-semibold">Frontend</h2>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+        <span v-for="(tech, index) in frontend" :key="'frontend-' + index"
+          class="px-3 py-1 text-center rounded-full text-xs bg-cyan-700 text-white ">
+          {{ tech }}
+        </span>
+      </div>
+    </section>
+
+    <!-- Backend Card -->
+    <section class="rounded-xl bg-purple-50 p-6">
+      <div class="flex items-center gap-2 mb-4">
+        <span class="text-2xl">🛠️</span>
+        <h2 class="text-xl font-semibold">Backend & Misc</h2>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+        <span v-for="(tech, index) in backend" :key="'backend-' + index"
+          class="px-3 py-1 text-center rounded-full text-xs text-white bg-gradient-to-r from-green-600 to-teal-500 shadow-sm">
+          {{ tech }}
+        </span>
+      </div>
+    </section>
+
+  </div>
 </template>
 
-<script setup>
-defineProps({
-    displayText: Boolean,
-    required: false
-});
 
-const iconPath = ref([
-    {
-        name: "JavaScript.png",
-        text: "CoreJS",
-    },
-    {
-        name: "React.png",
-        text: "ReactJS",
-    },
-    {
-        name: "CSS3.png",
-        text: "CSS3",
-    },
-    { name: "HTML5.png", text: "HTML5" },
-    { name: "Nuxt JS.png", text: "Nuxt" },
-    { name: "Next.js.png", text: "Next" },
-    { name: "Vue.js.png", text: "VueJS" },
-    { name: "Typescript.png", text: "Typescript" },
-    { name: "stencil.png", text: "Stencil" },
-    { name: "Tailwind CSS.png", text: "Tailwind" },
-    { name: "Sass.png", text: "SASS" },
-    // { name: "Cucumber.png", text: "BDD-E2E" },
-    { name: "Node.js.png", text: "NodeJS" },
-]);
+<script setup>
+const frontend = [
+   "ReactJS", "CSS3", "HTML5", "Astro JS","Nuxt", "Next", "Vue3", "Vue2",
+   "Typescript", "StencilJS", "Tailwind", "SASS", "RWD", "GraphQL"
+];
+
+const backend = ["NodeJS", "Drupal", "PHP", "MySQL", "CucumberJS", "Selenium", "Cypress" , "Git", "SSR", "SSG", "PWA", "AEM" ,"Core Java*"];
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+/* No additional styles needed — all Tailwind */
+</style>

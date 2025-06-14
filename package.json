@@ -7,7 +7,8 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "deploy": "gh-pages -d .output/public"
   },
   "dependencies": {
     "@nuxt/image": "^1.7.0",
@@ -20,6 +21,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@nuxtjs/google-fonts": "^3.2.0",
     "@nuxtjs/tailwindcss": "^6.12.1",
-    "@vesp/nuxt-fontawesome": "^1.0.4"
+    "@vesp/nuxt-fontawesome": "^1.0.4",
+    "gh-pages": "^6.3.0"
   }
 }

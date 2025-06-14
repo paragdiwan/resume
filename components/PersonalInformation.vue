@@ -1,40 +1,49 @@
 <template>
-  <div>
-
-    <figcaption class="flex flex-col items-center space-x-4">
+  <div class="max-w-md mx-auto text-black">
+    <div class="flex flex-col items-center text-center">
       <img
-        src="https://media.licdn.com/dms/image/C5603AQHTx2GLN_MKAQ/profile-displayphoto-shrink_800_800/0/1590039615862?e=1726704000&v=beta&t=Tn63i2Ha33W-ZXxn0zZo5xJ4nqI0C-951OiT3fQWJ9U"
-        alt="" class="text-center w-24 h-24 rounded-full object-contain" loading="lazy" decoding="async" />
+        src="https://media.licdn.com/dms/image/v2/D4D03AQG2XzIxpxomig/profile-displayphoto-shrink_400_400/B4DZWMwczUGcAg-/0/1741823267021?e=1754524800&v=beta&t=jE9JTlClZMWns6r4iIwHiSq31CjJFdtYTCNPe_vS2tI"
+        alt="Parag Diwan"
+        class="w-28 h-28 rounded-full object-cover border-4 border-indigo-500"
+        loading="lazy"
+        decoding="async"
+      />
 
-      <div class="">
-        <div class="text-base mt-4">
-          <a href="#" class="text-indigo-100 ml-4 my-4 tracking-wider text-2xl font-semibold" tabindex="0">
-            Parag Diwan</a>
-        </div>
-        <div class="fa-fa-map-marker mt-1 ml-4 text-sm font-bold text-slate-200">
-          <div>
-            <font-awesome icon="location-dot" />
-            &nbsp;Pune, MH, INDIA.
-          </div>
+      <h1 class="mt-4 text-2xl font-bold">Parag Diwan</h1>
 
-          <div class="flex flex-row mt-4">
-            <NuxtLink href="https://www.linkedin.com/in/paragdiwan/" target="_blank" class="text-slate-200 mr-3">
-              <NuxtImg src="LinkedIn.png" width="40" height="40" />
-            </NuxtLink>
+      <p class="mt-1 text-sm flex items-center gap-2">
+        <font-awesome icon="location-dot" class="" />
+        Pune, MH, INDIA
+      </p>
+      <p class="mt-1 text-sm  flex items-center gap-2">
+        +91 8805026370
+      </p>
 
-            <NuxtLink href="https://www.github.com/paragdiwan" target="_blank" class="text-slate-200">
-              <NuxtImg src="GitHub.png" width="40" height="40" />
-            </NuxtLink>
-          </div>
-        </div>
+      <div class="mt-4 flex gap-4">
+        <NuxtLink
+          href="https://www.linkedin.com/in/paragdiwan/"
+          target="_blank"
+          aria-label="LinkedIn"
+        >
+          <NuxtImg src="LinkedIn.png" width="36" height="36" class="hover:scale-110 transition" />
+        </NuxtLink>
+
+        <NuxtLink
+          href="https://www.github.com/paragdiwan"
+          target="_blank"
+          aria-label="GitHub"
+        >
+          <NuxtImg src="GitHub.png" width="36" height="36" class="hover:scale-110 transition" />
+        </NuxtLink>
       </div>
-    </figcaption>
+    </div>
   </div>
 </template>
 
 <script setup>
-
-
+// No script logic needed for this component
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+/* Optional: You can add custom styles here */
+</style>

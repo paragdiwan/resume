@@ -1,10 +1,12 @@
 <template>
-  <div class="py-1">
-      <h2 class="text-2xl text-indigo-900 font-bold  pb-1  transition-all duration-300 hover:tracking-wider">
-        {{ title }}
-      </h2>
-  </div>
+<span
+    class="ml-2 inline-block bg-black text-white text-xs font-semibold px-2 py-0.5 rounded-full shadow-sm align-middle"
+>
+    {{title}}
+</span>
 </template>
+
+
 
 <script setup>
 defineProps({

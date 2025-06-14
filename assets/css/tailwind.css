@@ -2,13 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+
 body {
-  font-family: "Noto Sans";
+  font-family: "Inter";
+  background-color: '#8a8f9e';
+  line-height: 2rem;
+ 
 }
 
 @layer utilities {
   .resume-text-color {
-    color: #e2e8f0;
+    color: black; /* Soft off-white for body text */
     margin: 10px 0;
+  }
+
+  .resume-heading {
+    color: black; /* Crisp white for headings */
+  }
+
+  .resume-subtle {
+    color: #a3a9b8; /* Gray-blue for less important text */
+  }
+
+  .resume-accent {
+    color: #f08a5d; /* Warm accent/orange */
+  }
+
+  .resume-divider {
+    border-color: #8a8f9e; /* Muted gray for dashed dividers */
   }
 }

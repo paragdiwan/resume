@@ -1,34 +1,32 @@
 <template>
-  <div class="bg-gray-900 p-4 mx-auto bg-center h-full">
-    <div class="container">
-      <div class="flex flex-row gap-7">
-        <div class="basis-1/3 bg-teal-900 py-6 rounded-lg">
+  <div class="min-h-screen flex items-start justify-center py-6 px-4">
+    <div class="rounded-xl container">
+      <div class="flex flex-col lg:flex-row gap-5">
+        <aside class="lg:basis-1/4 rounded-lg">
           <PersonalInformation />
-        </div>
-        <div class="basis-3/4 divide-y divide-emerald-400 divide-dashed">
+        </aside>
+        <main class="lg:basis-3/4 space-y-6">
           <WorkExperience />
           <Skills />
           <Projects />
-          <!-- <PriorProjects /> -->
           <Education />
           <Awards />
           <Employers />
-        </div>
+        </main>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-
 useSeoMeta({
   title: 'Parag Diwan | Resume',
-  description: 'Parag Diwan is a Frontend Architect with 19 years of experience. He is master of React,Vue,Nuxt,Next JS with Responsive Web Design.',
-  ogDescription: 'Parag Diwan is a Frontend Architect with 19 years of experience. He is master of React,Vue,Nuxt,Next JS with Responsive Web Design.',
-  ogTitle: 'Parag Diwan | Resume'
+  description:
+    'Parag Diwan is a Frontend Architect with 19 years of experience. He is master of React,Vue,Nuxt,Next JS with Responsive Web Design.',
+  ogDescription:
+    'Parag Diwan is a Frontend Architect with 19 years of experience. He is master of React,Vue,Nuxt,Next JS with Responsive Web Design.',
+  ogTitle: 'Parag Diwan | Resume',
 });
-
-
 </script>
 
 <style lang="scss" scoped></style>
